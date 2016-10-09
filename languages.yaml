@@ -93,3 +93,52 @@ en:
         # Character replacements
         '~([A-Z]+)([A-Z][a-z])~': '\1-\2'
         '~([a-z]{2,})([A-Z])~': '\1-\2'
+
+# Russian
+ru:
+  PLUGINS:
+    TOC:
+      GLOBAL_CONFIG: "Общие параметры плагина"
+      DEFAULT_CONFIG: "Значения по-умолчанию параметров External Links"
+      SPECIFIC_CONFIG: "Общие и постраничные параметры"
+      PLUGIN_STATUS: "Статус плагина"
+      BUILTIN_CSS: "Использовать встроенные CSS"
+
+      TITLE: "Показывать заголовок в Оглавлении"
+      ANCHORLINK: "Показывать анкор ссылок"
+      ANCHORLINK_HELP: "Установите в true, чтобы заголовки ссылались на самих себя."
+      PERMALINK: "ЧПУ для заголовков"
+      PERMALINK_HELP: "Установите в true, чтобы генерировать ЧПУ в начале каждого заголовка"
+      PLACEMENT: "Размещение анкорной ссылки"
+      PLACEMENT_LEFT: "Слева"
+      PLACEMENT_RIGHT: "Справа"
+      VISIBLILITY: "Видимость анкорной ссылки"
+      VISIBLILITY_HOVER: "наведение - Видимый при наведении"
+      VISIBLILITY_ALWAYS: "всегда - Всегда видимый"
+      ICON: "Иконка анкорной ссылки"
+      ICON_HELP: "По-умолчанию ссылка или специальный символ, например: #, ¶, ❡ или §."
+      CLASS: "Дополнительные классы"
+      CLASS_HELP: "Добавляет предоставленный класс в анкорную ссылку"
+      BASELEVEL: "Базовый уровень заголовков"
+      HEADINGLEVEL: "Максимальный уровень заголовка для отображения в TOC/MINITOC"
+
+      PROCESS: "Активировать <code>Toc</code> фильтр на странице"
+      SLUG:
+        SECTION: "Генерация URL"
+        TRUNCATE: "Обрезать заголовки для создания URL"
+        LENGTH: "Длина строки URL"
+        BREAK: "Разделитель"
+        BREAK_HELP: "Разделить для замены пробелов между словами в URL"
+        PAD: "Добавление"
+        PAD_HELP: "Добавлено в конец URL"
+
+      PATTERNS:
+        # Replace non letter or digits by -
+        '~\&~': 'and'
+        '~[^\p{L}\d]+~u': '-'
+        '~(\w{4,})y\-s\-~i': '$1ies-'
+        '~(\w{4,})\-s\-~i': '$1s-'
+
+        # Character replacements
+        '~([A-Z]+)([A-Z][a-z])~': '\1-\2'
+        '~([a-z]{2,})([A-Z])~': '\1-\2'
